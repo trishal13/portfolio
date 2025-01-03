@@ -46,7 +46,7 @@ const AboutMe = () => {
             <div>Technical Skills</div>
             <div>{
               Object.keys(technicalSkills).map((key) => 
-                <div>
+                <div key={key}>
                   <div>{key}</div>
                   <div>
                     {technicalSkills[key].map((item, index) => (

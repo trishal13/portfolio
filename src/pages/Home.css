@@ -1,0 +1,19 @@
+@keyframes shine {
+    0% {
+      border-color: rgba(255, 255, 255, 0.5);
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+      border-color: rgba(255, 255, 255, 1);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+      border-color: rgba(255, 255, 255, 0.5);
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+  }
+  
+  .hover\:animate-shine:hover {
+    animation: shine 2s ease-in-out infinite;
+  }
+  

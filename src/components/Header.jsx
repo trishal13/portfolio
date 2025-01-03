@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-black text-white" style={{ fontFamily: 'Consolas, monospace' }}>
+    <header className="bg-transparent text-white" style={{ fontFamily: 'Consolas, monospace' }}>
       <div className="container mx-auto px-4 py-6 flex justify-between items-center">
         <Link 
           to="/" 
@@ -31,7 +31,7 @@ const Header = () => {
           <NavLink
             to="/"
             className={({ isActive }) => 
-              `text-white hover:text-red-500 transition text-lg ${isActive ? 'text-red-500' : ''}`
+              `${isActive ? 'text-red-500' : 'text-white'} hover:text-red-500 transition text-lg`
             }
           >
             Home
@@ -39,7 +39,7 @@ const Header = () => {
           <NavLink
             to="/aboutme"
             className={({ isActive }) => 
-              `text-white hover:text-red-500 transition text-lg ${isActive ? 'text-red-500' : ''}`
+              `${isActive ? 'text-red-500' : 'text-white'} hover:text-red-500 transition text-lg`
             }
           >
             About
@@ -47,7 +47,7 @@ const Header = () => {
           <NavLink
             to="/projects"
             className={({ isActive }) => 
-              `text-white hover:text-red-500 transition text-lg ${isActive ? 'text-red-500' : ''}`
+              `${isActive ? 'text-red-500' : 'text-white'} hover:text-red-500 transition text-lg`
             }
           >
             Projects
@@ -55,7 +55,7 @@ const Header = () => {
           <NavLink
             to="/contactme"
             className={({ isActive }) => 
-              `text-white hover:text-red-500 transition text-lg ${isActive ? 'text-red-500' : ''}`
+              `${isActive ? 'text-red-500' : 'text-white'} hover:text-red-500 transition text-lg`
             }
           >
             Contact
@@ -63,7 +63,7 @@ const Header = () => {
           <NavLink
             to="/work-experience"
             className={({ isActive }) => 
-              `text-white hover:text-red-500 transition text-lg ${isActive ? 'text-red-500' : ''}`
+              `${isActive ? 'text-red-500' : 'text-white'} hover:text-red-500 transition text-lg`
             }
           >
             Work Experience
