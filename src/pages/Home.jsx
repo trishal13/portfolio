@@ -12,9 +12,10 @@ const InfoCard = ({ icon, label, infoValue }) => {
       onMouseEnter={() => setTextColor("text-white")}
       onMouseLeave={() => setTextColor("text-red-500")}
       style={{ fontFamily: 'Consolas, monospace' }}
-      className="flex flex-col items-center justify-center text-white rounded-full border-4 border-transparent p-6 bg-transparent hover:border-red-600 hover:animate-shine hover:scale-110 transition-all duration-300 ease-in-out hover:cursor-pointer"
+      // className="flex flex-col items-center justify-center text-white rounded-full border-4 border-transparent p-6 bg-transparent hover:border-red-600 hover:animate-shine hover:scale-110 transition-all duration-300 ease-in-out hover:cursor-pointer"
+      className="flex flex-col items-center justify-center text-white p-6 bg-transparen hover:cursor-pointer"
     >
-      <div className={`text-6xl font-extrabold ${textColor}`}>
+      <div className={`text-6xl font-extrabold ${textColor} hover:shadow-xl hover:scale-110 transition-all duration-300 ease-in-out`}>
         {icon}
       </div>
       <span className={`text-xs mt-1 font-extrabold ${textColor}`}>
