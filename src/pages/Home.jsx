@@ -164,7 +164,7 @@ const Home = () => {
       </div>
 
       {/* Resume Button */}
-      <div className="mt-4">
+      <div className="mt-7">
         <Link
           to={info?.resume}
           target="_blank"
