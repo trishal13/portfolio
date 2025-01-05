@@ -10,11 +10,6 @@ import weatherApp from "../images/weatherApp.png";
 import moneyTransferSystem from "../images/moneyTransferSystem.png";
 import profile from "../images/profile.jpeg";
 import myResume from "../images/TrishalMakhijaResume.pdf";
-import linkedinLogo from "../images/linkedin.svg";
-import twitterLogo from "../images/twitter.svg";
-import instagramLogo from "../images/instagram.svg";
-import emailLogo from "../images/email.png";
-import mobileLogo from "../images/mobile.png";
 
 export const projects=[
     {
@@ -98,31 +93,26 @@ export const info={
 export const socialNetworks = [
     {
         platform: "Email",
-        logo: emailLogo,
         userName: "trishalmakhija@gmail.com",
         url: "mailto:trishalmakhija@gmail.com",
     },
     {
         platform: "Mobile",
-        logo: mobileLogo,
         userName: "+918305946997",
         url: "tel:+918305946997",
     },
     {
         platform: "LinkedIn",
-        logo: linkedinLogo,
         userName: "Trishal Makhija",
         url: "https://linkedin.com/in/trishal-makhija-095732228",
     },
     {
         platform: "Twitter",
-        logo: twitterLogo,
         userName: "_trishal_13_",
         url: "https://x.com/_trishal_13_",
     },
     {
         platform: "Instagram",
-        logo: instagramLogo,
         userName: "_trishal_13_",
         url: "https://www.instagram.com/_trishal_13_/",
     },

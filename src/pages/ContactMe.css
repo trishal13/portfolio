@@ -1,0 +1,4 @@
+.peer:hover ~ .peer{
+    transform: scale(0.75);
+    transition: transform 300ms ease-in-out;
+}

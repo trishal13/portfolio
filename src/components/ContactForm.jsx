@@ -1,3 +1,4 @@
+// make it work using smtp and add toast
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 
@@ -9,10 +10,10 @@ const ContactForm = () => {
   });
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     // Handle form submission logic here
     // console.log(formData);
-    alert(formData);
+    alert(JSON.stringify(formData, null, 2));
   };
 
   const handleChange = (e) => {

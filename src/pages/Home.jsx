@@ -1,9 +1,12 @@
+// redesign profile picture
 import React, { useState } from 'react';
 import { info } from '../utils/data';
 import { TypeAnimation } from 'react-type-animation';
-import { FaBirthdayCake, FaGraduationCap, FaCity, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaBirthdayCake, FaGraduationCap, FaExternalLinkAlt } from 'react-icons/fa';
 import "./Home.css";
 import { Link } from 'react-router-dom';
+import { FaMapLocationDot } from 'react-icons/fa6';
+import { FileText } from 'lucide-react';
 
 const InfoCard = ({ icon, label, infoValue }) => {
   const [textColor, setTextColor] = useState("text-red-500");
@@ -50,6 +53,10 @@ const Home = () => {
             500,
             "I'm a Software Developer Engineer",
             500,
+            "I'm a Problem",
+            500,
+            "I'm a Problem Solver",
+            500,
           ]}
           speed={50}
           repeat={Infinity}
@@ -67,7 +74,7 @@ const Home = () => {
           label="Bachelor of Technology"
         />
         <InfoCard
-          icon={<FaCity />}
+          icon={<FaMapLocationDot />}
           label="Indore, M.P."
         />
       </div>
@@ -80,6 +87,7 @@ const Home = () => {
           rel="noopener noreferrer"
           className="flex items-center space-x-2 font-bold text-white text-lg hover:text-purple-400 transition-colors duration-300 ease-in-out"
         >
+          <FileText />
           <span className="text-xl" style={{ fontFamily: 'Consolas, monospace' }}>Get My Resume</span>
           <FaExternalLinkAlt className="text-xl" />
         </Link>

@@ -1,9 +1,9 @@
-// make the form work using smtp
 import React from 'react';
 import { Linkedin, Instagram, Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ContactForm from '../components/ContactForm';
 import { socialNetworks } from '../utils/data';
+import "./ContactMe.css";
 
 // Custom X (Twitter) icon component
 const XIcon = ({ size, className }) => (
@@ -39,7 +39,7 @@ const ContactMe = () => {
             to={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative w-16 h-16"
+            className="group peer relative w-16 h-16 transform transition-transform duration-300 hover:scale-125"
           >
             {/* Floating effect particles */}
             <div className="absolute -inset-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
