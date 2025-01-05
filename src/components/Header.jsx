@@ -16,16 +16,18 @@ const Header = () => {
       <div className="container mx-auto px-4 py-6 flex justify-between items-center">
         <Link 
           to="/" 
-          className="text-3xl font-bold tracking-wide text-white relative"
+          className="text-3xl font-bold tracking-wide text-white relative group"
           style={{ 
             fontFamily: 'Montserrat, sans-serif',
             padding: '0.5rem 1rem',
           }}
         >
-          <span className="relative z-10">TRISHAL</span>
-          <span className="absolute inset-0 border-2 border-red-500 -skew-x-12 z-0"></span>
+          <span className="relative z-10 transition-colors duration-300 group-hover:text-red-500">
+            TRISHAL
+          </span>
+          <span className="absolute inset-0 border-2 border-red-500 -skew-x-12 z-0 transition-colors duration-300 group-hover:border-white"></span>
         </Link>
-
+        
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
           <NavLink

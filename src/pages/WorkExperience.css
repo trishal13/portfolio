@@ -1,0 +1,29 @@
+/* Custom CSS for revolving and bouncing effect */
+.circle-animation {
+    width: 64px;
+    height: 64px;
+    background-color: #f44336; /* Red color */
+    border-radius: 50%; /* Make it circular */
+    animation: revolve 1.5s linear, bounce 1.5s 1.5s infinite ease-in-out;
+  }
+  
+  /* Revolve animation */
+  @keyframes revolve {
+    0% {
+      transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(0) rotate(-360deg);
+    }
+  }
+  
+  /* Bounce animation */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-100px);
+    }
+  }
+  
