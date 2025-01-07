@@ -6,10 +6,8 @@ import "./WorkExperience.css";
 const WorkExperience = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center mt-4">
-        <div className="text-lg font-semibold text-white mb-2">
-          Work Experience
-        </div>
+      <div className="bg-transparent text-white py-10 px-4 flex flex-col items-center justify-center">
+        <h1 className="text-3xl font-bold text-center mb-6">Work Experience</h1>
         {work.length === 0 && (
           <p className="text-sm text-gray-400 italic" style={{ fontFamily: 'Consolas, monospace' }}>
             Currently no work experience

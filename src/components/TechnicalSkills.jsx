@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import { Calendar } from "lucide-react";
-import { education } from "../utils/data";
+import React, { useState } from 'react';
+import { codingProfiles } from '../utils/data';
+import { Link } from 'react-router-dom';
+import Slideshow from './SlideShow';
 
-const EducationSection = () => {
+const TechnicalSkills = () => {
   const [mousePosition, setMousePosition] = useState(null);
   const [borderGradient, setBorderGradient] = useState({});
 
@@ -13,7 +14,6 @@ const EducationSection = () => {
 
     const borderThreshold = 150;
 
-    // Determine which border the mouse is nearest to
     const isNearTop = y < borderThreshold;
     const isNearBottom = y > rect.height - borderThreshold;
     const isNearLeft = x < borderThreshold;
@@ -27,9 +27,9 @@ const EducationSection = () => {
       gradientStyles.borderImage = "linear-gradient(to right, #ec4899, #8b5cf6, #6366f1) 1";
     }
     if (isNearBottom) {
-        gradientStyles.borderBottom = "2px solid transparent";
-        gradientStyles.borderImage = "linear-gradient(to right, #ec4899, #8b5cf6, #6366f1) 1";
-        gradientStyles.boxShadow = "0 8px 15px rgba(236, 72, 153, 0.5)";
+      gradientStyles.borderBottom = "2px solid transparent";
+      gradientStyles.borderImage = "linear-gradient(to right, #ec4899, #8b5cf6, #6366f1) 1";
+      gradientStyles.boxShadow = "0 8px 15px rgba(236, 72, 153, 0.5)";
     }
     if (isNearLeft) {
       gradientStyles.borderLeft = "2px solid transparent";
@@ -52,8 +52,8 @@ const EducationSection = () => {
   };
 
   return (
-    <section
-      className={`space-y-6 p-6 rounded-3xl transition-all duration-300 relative overflow-hidden bg-transparent`}
+    <div
+      className="flex flex-col lg:flex-row gap-8 p-4 sm:p-6 rounded-3xl transition-all duration-300 relative overflow-hidden bg-transparent"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ ...borderGradient, transition: "border 0.2s ease, box-shadow 0.2s ease, border-radius 0.2s ease" }}
@@ -70,37 +70,40 @@ const EducationSection = () => {
         />
       )}
 
-      <h2 className="text-2xl font-semibold text-red-500">Education</h2>
-      <div className="space-y-4" style={{ fontFamily: "Consolas, monospace" }}>
-        {education.map((item, index) => (
-          <div
-            key={index}
-            className="p-6 rounded-lg bg-transparent hover:scale-105 transform transition-transform duration-300"
-          >
-            <div className="flex items-center gap-2 text-gray-300 mb-3">
-              <Calendar className="h-5 w-5 text-red-700" />
-              <span className="font-medium text-red-700">{item?.duration}</span>
-            </div>
-            <h3 className="text-lg font-semibold text-white mb-1">
-              {item?.degree}
-            </h3>
-            <p className="text-gray-400 italic"> from {item?.institute}</p>
-            {(item?.cgpa || item?.percentage) && (
-              <p className="text-gray-300 mt-2">
-                {item?.cgpa
-                  ? `with a cumulative CGPA of ${item?.cgpa}`
-                  : `with ${item?.percentage}`}
-              </p>
-            )}
-            <div className="flex items-center justify-center mt-4">
-              <div className="flex-grow h-px bg-red-500/60 max-w-xl" />
-              <div className="flex-grow h-px bg-red-500/60 max-w-xl" />
-            </div>
-          </div>
-        ))}
+      {/* Slideshow Section */}
+      <div className="w-full lg:w-3/5">
+        <Slideshow />
       </div>
-    </section>
+
+      {/* Coding Profiles Section */}
+      <section className="w-full lg:w-2/5">
+        <h2 className="text-2xl font-semibold text-red-500 mb-6">Coding Profile Links</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
+          {codingProfiles.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center text-center space-y-2 hover:scale-105 transition-transform duration-300"
+            >
+              <Link
+                to={item?.profileurl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <img
+                  src={item?.logo}
+                  alt={`${item?.platform}_${item?.userId}`}
+                  className="w-12 h-12 rounded-full"
+                  loading="lazy"
+                />
+                <p className="text-sm font-medium mt-2">{item?.platform}</p>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 };
 
-export default EducationSection;
+export default TechnicalSkills;

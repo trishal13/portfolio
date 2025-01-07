@@ -121,12 +121,12 @@ export const socialNetworks = [
 export const work=[];
 
 export const technicalSkills={
-    languages: ["C++", "Java"],
-    webDevelopment: ["HTML", "CSS", "JavaScript", "NodeJs", "ReactJS", "ExpressJS", "MongoDB"],
-    familiarWith: ["Python3", "Dijango", "Cloudinary"],
-    tools: ["VS Code", "Postman"],
-    Coursework: ["Data Structures & Algorithms", "Object Oriented Programming", "Database Management System", "Operating System"],
-    databases: ["SQL"],
+    "Languages": ["C++", "Java"],
+    "Web Development": ["HTML", "CSS", "JavaScript", "NodeJs", "ReactJS", "ExpressJS", "MongoDB"],
+    "Familiar with": ["Python3", "Dijango", "Cloudinary"],
+    "Tools": ["VS Code", "Postman"],
+    "Coursework": ["Data Structures & Algorithms", "Object Oriented Programming", "Database Management System", "Operating System"],
+    "Databases": ["SQL"],
 };
 
 export const codingProfiles=[
