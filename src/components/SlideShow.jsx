@@ -3,8 +3,7 @@ import { technicalSkills } from "../utils/data";
 import { 
   Code, 
   Globe, 
-  Database, 
-  Terminal,
+  Database,
   Wrench, 
   BookOpen,
   Braces,
@@ -76,7 +75,7 @@ const Slideshow = () => {
             <>
               <div
                 key={`${category}-${index}`}
-                className="relative flex items-start space-x-4 p-4 h-48"
+                className="relative flex items-start space-x-4 p-4"
               >
                 <div className={`flex-shrink-0 w-12 h-12 flex items-center justify-center ${getCategoryBgColor(category)} rounded-full transition-all duration-300 hover:scale-110`}>
                   {getCategoryIcon(category)}
@@ -98,7 +97,9 @@ const Slideshow = () => {
                 </div>
               </div>
               {index === 0 && (
-                <div className="h-px bg-red-500/60 max-w-xl"></div>
+                <div className="flex items-center justify-center m-5">
+                    <div className=" flex-grow h-px bg-red-500/60 max-w-md"></div>
+                </div>
               )}
             </>
           ))}

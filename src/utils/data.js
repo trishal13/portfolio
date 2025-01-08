@@ -68,13 +68,13 @@ export const education=[
     {
         duration: "2019-2020",
         degree: "Completed Class 12th",
-        institute: "St. Norbert Senior Secondary School , Indore M.P.",
+        institute: "St. Norbert Senior Secondary School, Indore M.P.",
         percentage: "94%",
     },
     {
         duration: "2017-2018",
         degree: "Completed Class 10th",
-        institute: "St. Norbert Senior Secondary School , Indore M.P.",
+        institute: "St. Norbert Senior Secondary School, Indore M.P.",
         percentage: "85.4%",
     },
 ];

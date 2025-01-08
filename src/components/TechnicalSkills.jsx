@@ -71,12 +71,12 @@ const TechnicalSkills = () => {
       )}
 
       {/* Slideshow Section */}
-      <div className="w-full lg:w-3/5">
+      <div className="w-full lg:w-1/2">
         <Slideshow />
       </div>
 
       {/* Coding Profiles Section */}
-      <section className="w-full lg:w-2/5">
+      <section className="w-full lg:w-1/2">
         <h2 className="text-2xl font-semibold text-red-500 mb-6">Coding Profile Links</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
           {codingProfiles.map((item, index) => (
