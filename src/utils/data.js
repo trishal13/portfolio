@@ -121,6 +121,7 @@ export const technicalSkills={
     "Familiar with": ["Python3", "Dijango", "Cloudinary"],
     "Tools": ["VS Code", "Postman"],
     "Coursework": ["Data Structures & Algorithms", "Object Oriented Programming", "Database Management System", "Operating System"],
+    // "Coursework": ["DSA", "OOPs", "DBMS", "OS"],
     "Databases": ["SQL"],
 };
 

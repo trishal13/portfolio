@@ -54,55 +54,65 @@ const Slideshow = () => {
     return () => clearInterval(interval);
   }, [skillEntries]);
 
-  const getSlideItems = () => {
-    const firstIndex = currentIndex;
-    const secondIndex = (currentIndex + 1) % skillEntries.length;
-    return [skillEntries[firstIndex], skillEntries[secondIndex]];
-  };
-
-  const slideItems = getSlideItems();
+  const currentSlide = skillEntries[currentIndex];
+  const nextSlide = skillEntries[(currentIndex + 1) % skillEntries.length];
 
   return (
     <section className="w-full max-w-3xl mx-auto">
       <h2 className="text-2xl font-semibold text-red-500">Technical Skills</h2>
-      <div className="relative overflow-hidden mt-4 h-96">
+      <div className="relative overflow-hidden mt-2 h-60">
+        {/* Current Slide */}
         <div 
-          className={`absolute w-full transition-transform duration-500 ease-in-out ${
-            isTransitioning ? '-translate-y-1/2' : 'translate-y-0'
+          className={`absolute w-full transition-all duration-500 ease-in-out transform ${
+            isTransitioning ? 'opacity-0 translate-y-full' : 'opacity-100 translate-y-0'
           }`}
         >
-          {slideItems.map(([category, skills], index) => (
-            <>
-              <div
-                key={`${category}-${index}`}
-                className="relative flex items-start space-x-4 p-4"
-              >
-                <div className={`flex-shrink-0 w-12 h-12 flex items-center justify-center ${getCategoryBgColor(category)} rounded-full transition-all duration-300 hover:scale-110`}>
-                  {getCategoryIcon(category)}
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-medium mb-2">{category}</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {skills.map((skill, idx) => (
-                        <span
-                            key={idx}
-                            style={{ fontFamily: 'Consolas, monospace' }}
-                            className="bg-red-700 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg"
-                        >
-                            {skill}
-                        </span>
-                  
-                    ))}
-                  </div>
-                </div>
+          <div className="relative flex items-start space-x-4 p-4">
+            <div className={`flex-shrink-0 w-12 h-12 flex items-center justify-center ${getCategoryBgColor(currentSlide[0])} rounded-full transition-all duration-300 hover:scale-110`}>
+              {getCategoryIcon(currentSlide[0])}
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-medium mb-4">{currentSlide[0]}</h3>
+              <div className="flex flex-wrap gap-3">
+                {currentSlide[1].map((skill, idx) => (
+                  <span
+                    key={idx}
+                    style={{ fontFamily: 'Consolas, monospace' }}
+                    className="bg-red-700 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg hover:scale-105 transition-transform duration-200"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
-              {index === 0 && (
-                <div className="flex items-center justify-center m-5">
-                    <div className=" flex-grow h-px bg-red-500/60 max-w-md"></div>
-                </div>
-              )}
-            </>
-          ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Next Slide (for smooth transition) */}
+        <div 
+          className={`absolute w-full transition-all duration-500 ease-in-out transform ${
+            isTransitioning ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
+          }`}
+        >
+          <div className="relative flex items-start space-x-4 p-4">
+            <div className={`flex-shrink-0 w-12 h-12 flex items-center justify-center ${getCategoryBgColor(nextSlide[0])} rounded-full transition-all duration-300 hover:scale-110`}>
+              {getCategoryIcon(nextSlide[0])}
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-medium mb-4">{nextSlide[0]}</h3>
+              <div className="flex flex-wrap gap-3">
+                {nextSlide[1].map((skill, idx) => (
+                  <span
+                    key={idx}
+                    style={{ fontFamily: 'Consolas, monospace' }}
+                    className="bg-red-700 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg hover:scale-105 transition-transform duration-200"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

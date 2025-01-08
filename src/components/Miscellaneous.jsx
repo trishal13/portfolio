@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import { Calendar } from "lucide-react";
-import { education } from "../utils/data";
+import React, { useState } from 'react';
+import { miscallenious } from '../utils/data';
 
-const EducationSection = () => {
+const Miscellaneous = () => {
   const [mousePosition, setMousePosition] = useState(null);
   const [borderGradient, setBorderGradient] = useState({});
 
@@ -53,8 +52,8 @@ const EducationSection = () => {
 
   return (
     <section
-    //   className={`space-y-6 p-6 rounded-3xl transition-all duration-300 relative overflow-hidden bg-transparent`}
       className={`flex flex-col gap-8 p-6 rounded-3xl transition-all duration-300 relative overflow-hidden bg-transparent`}
+    //   className={`space-y-6 p-6 rounded-3xl transition-all duration-300 relative overflow-hidden bg-transparent`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ ...borderGradient, transition: "border 0.2s ease, box-shadow 0.2s ease, border-radius 0.2s ease" }}
@@ -71,37 +70,24 @@ const EducationSection = () => {
         />
       )}
 
-      <h2 className="text-2xl font-semibold text-red-500">Education</h2>
+      <h2 className="text-2xl font-semibold text-red-500">Miscellaneous</h2>
       <div className="space-y-4" style={{ fontFamily: "Consolas, monospace" }}>
-        {education.map((item, index) => (
-          <div
-            key={index}
-            className="p-6 rounded-lg bg-transparent hover:scale-105 transform transition-transform duration-300"
-          >
-            <div className="flex items-center gap-2 text-gray-300 mb-3">
-              <Calendar className="h-5 w-5 text-red-700" />
-              <span className="font-medium text-red-700">{item?.duration}</span>
+        {miscallenious.map((item, index) => (
+            <div
+                key={index}
+                className="px-6 rounded-lg bg-transparent hover:scale-105 transform transition-transform duration-300"
+            >
+                <h3 className="text-lg font-semibold text-white mb-1">
+                    <span className="text-white mr-2">•</span>
+                    {item}
+                </h3>
             </div>
-            <h3 className="text-lg font-semibold text-white mb-1">
-              {item?.degree}
-            </h3>
-            <p className="text-gray-400 italic"> from {item?.institute}</p>
-            {(item?.cgpa || item?.percentage) && (
-              <p className="text-gray-300 mt-2">
-                {item?.cgpa
-                  ? `with a cumulative CGPA of ${item?.cgpa}`
-                  : `with ${item?.percentage}`}
-              </p>
-            )}
-            <div className="flex items-center justify-center mt-4">
-              <div className="flex-grow h-px bg-red-500/60 max-w-xl" />
-              <div className="flex-grow h-px bg-red-500/60 max-w-xl" />
-            </div>
-          </div>
+            
         ))}
       </div>
-    </section>
-  );
-};
 
-export default EducationSection;
+    </section>
+  )
+}
+
+export default Miscellaneous

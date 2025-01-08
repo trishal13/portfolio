@@ -1,7 +1,8 @@
 import React from 'react';
-import { miscallenious, info } from '../utils/data';
+import { info } from '../utils/data';
 import EducationSection from '../components/Education';
 import TechnicalSkills from '../components/TechnicalSkills';
+import Miscellaneous from '../components/Miscellaneous';
 
 const AboutMe = () => {
   return (
@@ -22,21 +23,7 @@ const AboutMe = () => {
         </div>
         <EducationSection />
         <TechnicalSkills />
-
-        {/* Miscellaneous Section */}
-        <section>
-          <h2 className="text-2xl font-semibold text-orange-400">Miscellaneous</h2>
-          <div className="space-y-2 mt-4">
-            {miscallenious.map((item, index) => (
-              <p
-                key={index}
-                className="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition duration-300"
-              >
-                {item}
-              </p>
-            ))}
-          </div>
-        </section>
+        <Miscellaneous />
       </div>
     </div>
   );
