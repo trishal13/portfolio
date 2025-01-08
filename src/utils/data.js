@@ -1,8 +1,3 @@
-import leetcode from "../images/leetcode.svg";
-import github from "../images/github.svg";
-import geeksforgeeks from "../images/geeksforgeeks.png";
-import codeforces from "../images/codeforces.svg";
-import codechef from "../images/codechef.png";
 import eazybazaar from "../images/eazyBazaarUserSide.png";
 import movieSearchEngine from "../images/movieSearchEngine.png";
 import driverManagementSystem from "../images/driverManagementSystem.png";
@@ -133,31 +128,26 @@ export const codingProfiles=[
     {
         platform: "LeetCode",
         profileurl: "https://leetcode.com/u/trishal_13/",
-        logo: leetcode,
         userId: "trishal_13",
     },
     {
         platform: "GeeksforGeeks",
         profileurl: "https://www.geeksforgeeks.org/user/trishal_13",
-        logo: geeksforgeeks,
         userId: "trishal_13",
     },
     {
         platform: "GitHub",
         profileurl: "https://github.com/trishal13",
-        logo: github,
         userId: "trishal13",
     },
     {
         platform: "CodeChef",
         profileurl: "https://www.codechef.com/users/trishal_13",
-        logo: codechef,
         userId: "trishal_13",
     },
     {
         platform: "CodeForces",
         profileurl: "https://codeforces.com/profile/trishal_13",
-        logo: codeforces,
         userId: "trishal_13",
     },
 ];
