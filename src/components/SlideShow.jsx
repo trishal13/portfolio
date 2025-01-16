@@ -1,14 +1,6 @@
 import { useState, useEffect } from "react";
 import { technicalSkills } from "../utils/data";
-import { 
-  Code, 
-  Globe, 
-  Database,
-  Wrench, 
-  BookOpen,
-  Braces,
-  Monitor
-} from "lucide-react";
+import { Code, Globe, Database, Wrench, BookOpen, Braces, Monitor } from "lucide-react";
 
 const Slideshow = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,7 +15,7 @@ const Slideshow = () => {
       "Familiar with": <Code className="w-6 h-6 text-purple-600" />,
       "Tools": <Wrench className="w-6 h-6 text-red-600" />,
       "Coursework": <BookOpen className="w-6 h-6 text-yellow-600" />,
-      "Databases": <Database className="w-6 h-6 text-orange-600" />
+      "Databases": <Database className="w-6 h-6 text-orange-600" />,
     };
     return icons[category] || <Monitor className="w-6 h-6 text-gray-600" />;
   };

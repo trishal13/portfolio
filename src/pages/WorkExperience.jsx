@@ -1,7 +1,6 @@
 // redesign this using claude ai
 import React from 'react';
 import { work } from '../utils/data';
-import "./WorkExperience.css";
 
 const WorkExperience = () => {
   return (
