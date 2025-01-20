@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
+import { Navigation, Pagination, Autoplay, EffectCoverflow, Mousewheel } from "swiper/modules";
 import { Github } from "lucide-react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -13,7 +13,7 @@ const Projects = () => {
     <div className="bg-transparent text-white py-10 px-4 flex flex-col items-center justify-center">
         <h1 className="text-3xl font-bold text-center mb-6">Featured Projects</h1>
         <Swiper
-          modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
+          modules={[Navigation, Pagination, Autoplay, EffectCoverflow, Mousewheel]}
           effect="coverflow"
           coverflowEffect={{
             rotate: 50,
@@ -22,12 +22,18 @@ const Projects = () => {
             modifier: 1,
             slideShadows: false,
           }}
+          mousewheel={{
+            forceToAxis: true,
+            sensitivity: 1,
+            releaseOnEdges: true,
+          }}
           spaceBetween={30}
           slidesPerView="auto"
           centeredSlides={true}
           navigation
           pagination={{ clickable: true }}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
+          slideToClickedSlide={true}
           className="w-full max-w-6xl"
         >
           {projects.map((project, index) => (
@@ -37,6 +43,7 @@ const Projects = () => {
                   <img
                     src={project?.thumbnail}
                     alt={project?.title}
+                    draggable="false"
                     className="w-full h-64 object-cover transform transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
