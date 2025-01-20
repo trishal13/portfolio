@@ -79,9 +79,9 @@ const Projects = () => {
           ))}
         </Swiper>
 
-        <p className="text-center mt-8 text-sm text-gray-400">
+        {/* <p className="text-center mt-8 text-sm text-gray-400">
           Swipe or use arrow keys to navigate through projects
-        </p>
+        </p> */}
     </div>
   );
 };
