@@ -1,5 +1,3 @@
-// change header border and smoodth hamburger menu also add transition effect on hover
-
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 

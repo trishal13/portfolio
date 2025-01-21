@@ -18,7 +18,7 @@ export const projects=[
         api: "Custom API for EazyBazaar",
     },
     {
-        title: "Money-Transfer-System",
+        title: "Money Transfer System",
         description: "",
         techStack: ["HTML", "CSS", "Django", "Jinja", "MySQL"],
         githubUrl: "https://github.com/trishal13/MONEY_TRANSFER_SYSTEM",
@@ -46,7 +46,7 @@ export const projects=[
     {
         title: "Driver Management System",
         description: "",
-        techStack: ["Python3"],
+        techStack: ["Python3", "MySQL"],
         githubUrl: "https://github.com/trishal13/Driver-Management-System",
         // hostingUrl: "",
         thumbnail: driverManagementSystem,
