@@ -4,7 +4,7 @@ import driverManagementSystem from "../images/driverManagementSystem.png";
 import weatherApp from "../images/weatherApp.png";
 import moneyTransferSystem from "../images/moneyTransferSystem.png";
 import profile from "../images/profile.jpeg";
-import myResume from "../images/TrishalMakhijaResume.pdf";
+import myResume from "../images/TrishalMakhija_Resume.pdf";
 
 export const projects=[
     {
