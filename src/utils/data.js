@@ -58,7 +58,7 @@ export const education=[
         duration: "2021-present",
         degree: "B.Tech in Computer Science & Engineering",
         institute: "Maulana Azad National Institute of Technology, Bhopal M.P.",
-        cgpa: "8.52/10",
+        cgpa: "8.38/10",
     },
     {
         duration: "2019-2020",
